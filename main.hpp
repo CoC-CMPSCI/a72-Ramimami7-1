@@ -31,7 +31,8 @@ void sumfold(int number[], int last)
 void equalfold(int number[], int equal[], int last)
 {
     for (int i = 0; i < last / 2; i++)
-        number[i] = number[i] + number[last - i - 1];
+        equal[i] = (number[i] == number[last - i - 1]) ? i : 0;
+
 }
 
 /***************************************************
