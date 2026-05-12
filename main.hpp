@@ -18,17 +18,20 @@ void equalfold(int[], int[], int);
 
 void swapfold(int number[], int last)
 {
-    // TODO: reverse the array in place — swap element i with element last-i-1
+    for (int i = 0; i < last / 2; i++)
+        swap(number[i], number[last - i - 1]);
 }
 
 void sumfold(int number[], int last)
 {
-    // TODO: for the first half, set number[i] = number[i] + number[last-i-1]
+    for (int i = 0; i < last / 2; i++)
+        number[i] = number[i] + number[last - i - 1];
 }
 
 void equalfold(int number[], int equal[], int last)
 {
-    // TODO: for first half, set equal[i] = 1 if number[i] == number[last-i-1], else 0
+    for (int i = 0; i < last / 2; i++)
+        number[i] = number[i] + number[last - i - 1];
 }
 
 /***************************************************
