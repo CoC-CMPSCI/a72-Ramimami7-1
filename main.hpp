@@ -31,8 +31,7 @@ void sumfold(int number[], int last)
 void equalfold(int number[], int equal[], int last)
 {
     for (int i = 0; i < last / 2; i++)
-        equal[i] = (number[i] == number[last - i - 1]) ? i : 0;
-
+        equal[i] = (number[i] == number[last - i - 1]) ? 1 : 0;
 }
 
 /***************************************************
@@ -51,6 +50,7 @@ int makearray(int number[])
         number[i] = rand() % 10;
     return last;
 }
+
 void printout(int number[], int last)
 {
     for (int i = 0; i < last; i++)
