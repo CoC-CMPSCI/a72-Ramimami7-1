@@ -24,7 +24,7 @@ void swapfold(int number[], int last)
 
 void sumfold(int number[], int last)
 {
-    for (int i = 0; i < last / 2; i++)
+    for (int i = 0; i < (last + 1) / 2; i++)
         number[i] = number[i] + number[last - i - 1];
 }
 
